@@ -1,0 +1,23 @@
+h1 {
+    color: black
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(7,160px);
+}
+.grid-item{
+    border: 1px solid;
+}
+#player_info{
+    width: 700px;
+    margin: solid;
+    border: 3px solid;
+    position: absolute;
+    top: 115px;
+    right: 450px;
+    width: 500px;
+    height: 180px;
+}
+.sources{
+    font-size: 7pt;
+}

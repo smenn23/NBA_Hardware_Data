@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/styling.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Hardware Data</title>
+</head>
+<body>
+    <template id = "names">{{names}}</template>
+    <template id="player_name">{{player_name}}</template>
+    <template id="player_image">{{player_image}}</template>
+    <div id="player_info">{{stats}}</div>
+    <h1>NBA Hardware Data
+    </h1>
+    <h2>Find all NBA players with at least the given amount of achievements</h2>
+    <button onclick="increment(0,-1)">-</button>
+    All Star Appearances
+    <button onclick="increment(0,1)">+</button> <span id="asgs">{{asgs}}</span>
+    <br>
+    <button onclick="increment(1,-1)">-</button>
+    MVPs
+    <button onclick="increment(1,1)">+</button> <span id="mvps">{{mvps}}</span>
+    <br>
+    <button onclick="increment(2,-1)">-</button>
+    Finals MVPs
+    <button onclick="increment(2,1)">+</button> <span id="fmvps">{{fmvps}}</span>
+    <br>
+    <button onclick="increment(3,-1)">-</button>
+    DPOYs
+    <button onclick="increment(3,1)">+</button> <span id="dpoys">{{dpoys}}</span>
+    <br>
+    <button onclick="increment(4,-1)">-</button>
+    Rings
+    <button onclick="increment(4,1)">+</button> <span id="rings">{{rings}}</span>
+    <br>
+
+
+    <br>
+    
+    <button id="find_button" onclick="window.location.href='/results0,0,0,0,0';">FIND</button>
+    &ensp;
+    <button id="reset_button" onclick="window.location.href='/';">RESET</button>
+    <br><br><br>
+    <p id = "total"></p>
+    <p id = "click_prompt">{{prompt}}</p>
+    <div class="grid-container" id="grid">
+        
+    </div>
+    <p class = 'sources'>Stats and Images used from basketball-reference.com<p>
+    
+
+    <script type="text/javascript"
+    src="{{url_for('static', filename='js/functionality.js')}}"></script>
+    
+</body>
+</html>
